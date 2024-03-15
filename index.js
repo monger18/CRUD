@@ -63,9 +63,7 @@ app.delete('/delete/:id', async (req, res) => {
 
 //database integartion
 mongoose
-  .connect(
-    'mongodb+srv://rahulraj18sep200051:hSYHj45c6HNfooGS@cluster0.srm68ud.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-  )
+  .connect(URL)
   .then(() => {
     console.log('connected to db')
     app.listen(PORT, () => console.log('server is running'))
